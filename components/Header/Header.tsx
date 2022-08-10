@@ -1,50 +1,74 @@
-import { Navbar } from "flowbite-react";
 import dwo from "../../assets/images/dwo.png"
 import Image from 'next/future/image'
+import styles from '../../styles/Header.module.css'
 
 export const Header = () => {
     return (
-        <div className="fixed w-full">
-            <Navbar
-                id="navbar"
-                fluid={true}
-                rounded={true}
-            >
-                <Navbar.Brand href="https://flowbite.com/">
-                    <Image
-                        src={dwo.src}
-                        width={6}
-                        height={6}
-                        className="mr-3 w-6 h-6 sm:h-9"
-                        alt="Flowbite Logo"
-                    />
-                    <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-                        D-Wo
-                    </span>
-                </Navbar.Brand>
-                <Navbar.Toggle />
-                <Navbar.Collapse>
-                    <Navbar.Link
-                        href="/navbars"
-                        active={true}
-                    >
-                        Home
-                    </Navbar.Link>
-                    <Navbar.Link href="/navbars">
-                        About Us
-                    </Navbar.Link>
-                    <Navbar.Link href="/navbars">
-                        Services
-                    </Navbar.Link>
-                    <Navbar.Link href="/navbars">
-                        Pricing
-                    </Navbar.Link>
-                    <Navbar.Link href="/navbars">
-                        Contact
-                    </Navbar.Link>
-                </Navbar.Collapse>
-            </Navbar>
-        </div>
+        <nav
+            className="z-50 px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full top-0 left-0">
+            <div className="container flex flex-wrap items-center mx-auto">
+                <a href="https://flowbite.com/" className="text-white mr-20">
+                    {/*<Image src={dwo.src} className="mr-3 h-6 sm:h-9"*/}
+                    {/*     alt="Flowbite Logo" width={50} height={50}/>*/}
+                        <span
+                            className="text-xl font-semibold">D-Wo</span>
+                </a>
+                <div className="flex md:order-2">
+                    <button data-collapse-toggle="navbar-sticky" type="button"
+                            className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                            aria-controls="navbar-sticky" aria-expanded="false">
+                        <span className="sr-only">Open main menu</span>
+                        <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                  clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div className="hidden justify-between items-center w-full md:flex md:w-auto md:order-1"
+                     id="navbar-sticky">
+                    <ul className="text-md font-semibold flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 dark:bg-gray-800">
+                        <li>
+                            <a href="#"
+                               className={`${styles.link} hover:text-white`}
+                               aria-current="page"
+                            >
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               className={`${styles.link} hover:text-white`}
+                            >
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               className={`${styles.link} hover:text-white`}
+                            >
+                                Our Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               className={`${styles.link} hover:text-white`}
+                             >
+                                Pricing
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               className={`${styles.link} hover:text-white`}
+                            >
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     );
 
 }
