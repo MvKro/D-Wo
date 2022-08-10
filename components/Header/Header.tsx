@@ -1,5 +1,3 @@
-import dwo from "../../assets/images/dwo.png"
-import Image from 'next/future/image'
 import styles from '../../styles/Header.module.css'
 
 export const Header = () => {
@@ -8,8 +6,6 @@ export const Header = () => {
             className="z-50 px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full top-0 left-0">
             <div className="container flex flex-wrap items-center mx-auto">
                 <a href="https://flowbite.com/" className="text-white mr-20">
-                    {/*<Image src={dwo.src} className="mr-3 h-6 sm:h-9"*/}
-                    {/*     alt="Flowbite Logo" width={50} height={50}/>*/}
                         <span
                             className="text-xl font-semibold">D-Wo</span>
                 </a>
@@ -20,9 +16,9 @@ export const Header = () => {
                         <span className="sr-only">Open main menu</span>
                         <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
                              xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
+                            <path fillRule="evenodd"
                                   d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                                  clip-rule="evenodd"></path>
+                                  clipRule="evenodd"></path>
                         </svg>
                     </button>
                 </div>
