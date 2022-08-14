@@ -18,7 +18,7 @@ export const Header = () => {
 
     return (
         <nav
-            className={`z-50 px-2 sm:px-4 py-2.5 w-full top-0 left-0 fixed transition duration-500 ${isSticky ? 'dark:bg-stone-900 shadow-md' : ''}`}>
+            className={`z-50 px-2 sm:px-4 py-2.5 w-full top-0 left-0 fixed transition duration-500 ${isSticky ? 'bg-stone-900 shadow-md' : ''}`}>
             <div className="container flex flex-wrap items-center mx-auto">
                 <a className="text-white mr-20">
                     <span className="text-xl font-semibold">D-Wo</span>
