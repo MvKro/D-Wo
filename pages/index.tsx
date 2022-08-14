@@ -6,6 +6,10 @@ import dwo from '../assets/images/dwo.png'
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
+import {Service} from "@/components/Service";
+import {Pricing} from "@/components/Pricing";
+import {Team} from "@/components/Team";
+import {Contact} from "@/components/Contact";
 
 const Home: NextPage = () => {
   return (
@@ -19,6 +23,10 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <Hero/>
       </main>
+        <Service></Service>
+        <Pricing></Pricing>
+        <Team></Team>
+        <Contact></Contact>
       <Footer/>
     </div>
   )
