@@ -1,16 +1,30 @@
+import {useEffect, useState} from "react";
 import styles from '../../styles/Header.module.css'
 
 export const Header = () => {
+    const [open, setOpen] = useState(false);
+    const [isSticky, setIsSticky] = useState(false);
+
+    useEffect(() => {
+        const onScroll = () => {
+            const scrollTop = window.scrollY;
+            setIsSticky(scrollTop >= 1)
+        }
+        window.addEventListener('scroll', onScroll);
+        return () => {
+            window.removeEventListener('scroll', onScroll);
+        };
+    }, [])
+
     return (
         <nav
-            className="z-50 px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full top-0 left-0">
+            className={`z-50 px-2 sm:px-4 py-2.5 w-full top-0 left-0 fixed transition duration-500 ${isSticky ? 'dark:bg-stone-900 shadow-md' : ''}`}>
             <div className="container flex flex-wrap items-center mx-auto">
-                <a href="https://flowbite.com/" className="text-white mr-20">
-                        <span
-                            className="text-xl font-semibold">D-Wo</span>
+                <a className="text-white mr-20">
+                    <span className="text-xl font-semibold">D-Wo</span>
                 </a>
                 <div className="flex md:order-2">
-                    <button data-collapse-toggle="navbar-sticky" type="button"
+                    <button onClick={() => setOpen(!open)} type="button"
                             className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                             aria-controls="navbar-sticky" aria-expanded="false">
                         <span className="sr-only">Open main menu</span>
@@ -22,9 +36,10 @@ export const Header = () => {
                         </svg>
                     </button>
                 </div>
-                <div className="hidden justify-between items-center w-full md:flex md:w-auto md:order-1"
-                     id="navbar-sticky">
-                    <ul className="text-md font-semibold flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 dark:bg-gray-800">
+                <div
+                    className={`justify-between items-center w-full md:flex md:w-auto md:order-1 ${open ? 'hidden' : ''}`}
+                    id="navbar-sticky">
+                    <ul className="text-md font-semibold flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0">
                         <li>
                             <a href="#"
                                className={`${styles.link} hover:text-white`}
@@ -50,7 +65,7 @@ export const Header = () => {
                         <li>
                             <a href="#"
                                className={`${styles.link} hover:text-white`}
-                             >
+                            >
                                 Pricing
                             </a>
                         </li>
