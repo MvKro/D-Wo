@@ -1,5 +1,7 @@
 import {useEffect, useState} from "react";
 import styles from '../../styles/Header.module.css'
+import Image from "next/future/image";
+import whiteLogo from "@/assets/images/dwo-blanco.png";
 
 export const Header = () => {
     const [open, setOpen] = useState(false);
@@ -21,7 +23,8 @@ export const Header = () => {
             className={`z-50 px-2 sm:px-4 py-2.5 w-full top-0 left-0 fixed transition duration-500 ${isSticky ? 'bg-stone-900 shadow-md' : ''}`}>
             <div className="container flex flex-wrap items-center mx-auto">
                 <a className="text-white mr-20">
-                    <span className="text-xl font-semibold">D-Wo</span>
+                    <Image width={120} height={120} src={whiteLogo.src}
+                           alt="build your website image"/>
                 </a>
                 <div className="flex md:order-2">
                     <button onClick={() => setOpen(!open)} type="button"
@@ -49,28 +52,28 @@ export const Header = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="#"
-                               className={`${styles.link} hover:text-white`}
-                            >
-                                About Us
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"
+                            <a href="#services"
                                className={`${styles.link} hover:text-white`}
                             >
                                 Our Services
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="#pricing"
                                className={`${styles.link} hover:text-white`}
                             >
                                 Pricing
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="#team"
+                               className={`${styles.link} hover:text-white`}
+                            >
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact"
                                className={`${styles.link} hover:text-white`}
                             >
                                 Contact Us

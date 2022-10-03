@@ -45,7 +45,7 @@ export const Contact = () => {
 
 
                                 <div className="text-right">
-                                    <input type="submit" id="submit" name="send" className="btn bg-red-500 text-white mt-6 btn border border-red-500 w-40 h-10"
+                                    <input type="submit" id="submit" name="send" className="btn bg-red-500 text-white mt-6 btn border border-red-500 w-40 h-10 hover:bg-red-600"
                                            value="Send Message"/>
                                 </div>
                         </div>
