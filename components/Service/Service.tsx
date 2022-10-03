@@ -1,5 +1,3 @@
-import Image from 'next/future/image'
-import heroImage from '@/assets/images/hero-image.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClipboardList, faWrench, faRobot } from "@fortawesome/free-solid-svg-icons";
 
@@ -10,7 +8,7 @@ export const Service = () => {
                 <div className="container mx-auto mt-16">
                 <div className="flex justify-center mx-5 mb-12">
                     <div className="lg:w-2/3 space-y-5 text-center mb-6">
-                        <h1 className="text-2xl text-gray-800 uppercase tracking-widest">What's a D-wo?</h1>
+                        <h1 className="text-2xl text-gray-800 uppercase tracking-widest">What&apos;s a D-wo?</h1>
                         <div className="h-0.5 bg-red-500 w-14 mx-auto"></div>
                         <p className="text-gray-400">
                             A D-Wo is a custom-made Digital Worker programed to execute your repetitive tasks and create value for your business
