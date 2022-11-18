@@ -1,11 +1,15 @@
-import {useEffect, useState} from "react";
+import {useEffect, useMemo, useRef, useState} from "react";
 import styles from '../../styles/Header.module.css'
 import Image from "next/future/image";
 import whiteLogo from "@/assets/images/dwo-blanco.png";
 
 export const Header = () => {
-    const [open, setOpen] = useState(false);
+    const [toggle, setToggle] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
+    const menu = useRef<HTMLDivElement>(null);
+    const isMenuOpen = useMemo(() => {
+        return !menu.current?.classList.contains("hidden");
+    },[toggle])
 
     useEffect(() => {
         const onScroll = () => {
@@ -18,16 +22,22 @@ export const Header = () => {
         };
     }, [])
 
+    const toggleMenu = () => {
+        menu.current?.classList.toggle("hidden")
+        setToggle(!toggle)
+    }
+
+
     return (
         <nav
-            className={`z-50 px-2 sm:px-4 py-2.5 w-full top-0 left-0 fixed transition duration-500 ${isSticky ? 'bg-stone-900 shadow-md' : ''}`}>
+            className={`z-50 px-2 sm:px-4 py-2.5 w-full top-0 left-0 fixed transition duration-500 md:bg-transparent ${isMenuOpen? 'bg-stone-900': '' } ${isSticky ? 'bg-stone-900 shadow-md md:bg-stone-900 md:shadow-md' : ''}`}>
             <div className="container flex flex-wrap items-center mx-auto">
-                <a className="text-white mr-20">
+                <a className="text-white mr-auto md:mr-20" >
                     <Image width={120} height={120} src={whiteLogo.src}
                            alt="build your website image"/>
                 </a>
                 <div className="flex md:order-2">
-                    <button onClick={() => setOpen(!open)} type="button"
+                    <button onClick={toggleMenu} type="button"
                             className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                             aria-controls="navbar-sticky" aria-expanded="false">
                         <span className="sr-only">Open main menu</span>
@@ -40,7 +50,8 @@ export const Header = () => {
                     </button>
                 </div>
                 <div
-                    className={`justify-between items-center w-full md:flex md:w-auto md:order-1 ${open ? 'hidden' : ''}`}
+                    ref={menu}
+                    className={`justify-between items-center w-full md:flex md:w-auto md:order-1 hidden`}
                     id="navbar-sticky">
                     <ul className="text-md font-semibold flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0">
                         <li>
