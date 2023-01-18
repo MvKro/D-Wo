@@ -1,5 +1,8 @@
 import Image from 'next/future/image'
 import heroImage from '@/assets/images/hero-image.png'
+import kmv from '@/assets/images/kmv.jpg'
+import ccj from '@/assets/images/ccj.jpg'
+import styles from '../../styles/Team.module.css'
 
 export const Team = () => {
     return (
@@ -20,7 +23,7 @@ export const Team = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-7 mt-12">
                     <div className="transform transition ease-in-out duration-300  hover:-translate-y-4">
                         <div className="text-center space-y-3">
-                            <img alt="" src="assets/images/team/img-1.jpg" className="rounded"/>
+                            <img alt="" src={heroImage.src} className={`rounded ${styles.img}`}/>
                                 <div>
                                     <a href="page-profile.html">Javier Mendez</a>
                                 </div>
@@ -30,7 +33,7 @@ export const Team = () => {
                     </div>
                     <div className="transform transition ease-in-out duration-300  hover:-translate-y-4">
                         <div className="text-center space-y-3">
-                            <img alt="" src="assets/images/team/img-2.jpg" className="rounded"/>
+                            <img alt="" src={kmv.src} className={`rounded ${styles.img}`}/>
                                 <div>
                                     <a href="page-profile.html">Karolina Muñoz</a>
                                 </div>
@@ -41,7 +44,7 @@ export const Team = () => {
 
                     <div className="transform transition ease-in-out duration-300  hover:-translate-y-4">
                         <div className="text-center space-y-3">
-                            <img alt="" src="assets/images/team/img-3.jpg" className="rounded"/>
+                            <img alt="" src={heroImage.src} className={`rounded ${styles.img}`}/>
                                 <div>
                                     <a href="page-profile.html">Andrey Sanchez</a>
                                 </div>
@@ -52,7 +55,7 @@ export const Team = () => {
 
                     <div className="transform transition ease-in-out duration-300  hover:-translate-y-4">
                         <div className="text-center space-y-3">
-                            <img alt="" src="assets/images/team/img-4.jpg" className="rounded"/>
+                            <img alt="" src={heroImage.src} className={`rounded ${styles.img}`}/>
                                 <div>
                                     <a href="page-profile.html">Angel Prado</a>
                                 </div>
@@ -62,7 +65,7 @@ export const Team = () => {
                     </div>
                     <div className="transform transition ease-in-out duration-300  hover:-translate-y-4">
                         <div className="text-center space-y-3">
-                            <img alt="" src="assets/images/team/img-4.jpg" className="rounded"/>
+                            <img alt="" src={ccj.src} className={`rounded ${styles.img}`}/>
                             <div>
                                 <a href="page-profile.html">Christian Carrizo</a>
                             </div>
@@ -72,7 +75,7 @@ export const Team = () => {
                     </div>
                     <div className="transform transition ease-in-out duration-300  hover:-translate-y-4">
                         <div className="text-center space-y-3">
-                            <img alt="" src="assets/images/team/img-4.jpg" className="rounded"/>
+                            <img alt="" src={heroImage.src} className={`rounded ${styles.img}`}/>
                             <div>
                                 <a href="page-profile.html">Juan Carlos Vargas</a>
                             </div>
