@@ -3,7 +3,7 @@ import heroImage from '@/assets/images/hero-image.png'
 
 export const Contact = () => {
     return (
-        <section id="contact" className="py-32 bg-slate-50">
+        <section id="contact" className="py-32 bg-slate-50 px-4">
             <div className="container mx-auto">
                 <div className="flex justify-center">
                     <div className="lg:w-2/3 space-y-5 text-center">
