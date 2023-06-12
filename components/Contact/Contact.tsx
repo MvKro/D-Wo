@@ -3,7 +3,7 @@ import heroImage from '@/assets/images/hero-image.png'
 
 export const Contact = () => {
     return (
-        <section id="contact" className="py-12">
+        <section id="contact" className="py-32 bg-slate-50">
             <div className="container mx-auto">
                 <div className="flex justify-center">
                     <div className="lg:w-2/3 space-y-5 text-center">
@@ -16,7 +16,7 @@ export const Contact = () => {
                         </p>
                     </div>
                 </div>
-                <div className="lg:col-span-2">
+                <div className="lg:col-span-2 mt-12">
                     <form method="post"  name="myForm" id="myForm">
                         <p id="error-msg"></p>
                         <div id="simple-msg"></div>

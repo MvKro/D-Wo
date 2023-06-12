@@ -1,5 +1,21 @@
 .img {
-    max-height: 250px;
-    max-width: 250px;
+    max-height: 300px;
+    max-width: 300px;
     margin: 0 auto;
+}
+
+@media (max-width: 1540px) {
+    .img {
+        max-height: 200px;
+        max-width: 200px;
+
+    }
+}
+
+@media (max-width: 700px) {
+    .img {
+        max-height: 300px;
+        max-width: 300px;
+
+    }
 }

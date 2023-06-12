@@ -2,6 +2,7 @@ import Image from 'next/future/image'
 import heroImage from '@/assets/images/hero-image.png'
 import kmv from '@/assets/images/kmv.jpg'
 import ccj from '@/assets/images/ccj.jpg'
+import jmh from '@/assets/images/jmh.jpg'
 import styles from '../../styles/Team.module.css'
 
 export const Team = () => {
@@ -23,64 +24,68 @@ export const Team = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-7 mt-12">
                     <div className="transform transition ease-in-out duration-300  hover:-translate-y-4">
                         <div className="text-center space-y-3">
-                            <img alt="" src={heroImage.src} className={`rounded ${styles.img}`}/>
-                                <div>
-                                    <a href="page-profile.html">Javier Mendez</a>
-                                </div>
-                                <div className="text-sm uppercase text-gray-400">Sr. RPA Developer</div>
-                                <div className="border-b"></div>
+
+                            <img alt="" src={jmh.src} className={`rounded ${styles.img}`}/>
+
+                            <div>
+                                <p>Javier Mendez</p>
+                                <p className="mt-3 text-sm uppercase text-gray-400">Sr. RPA Developer</p>
+                                <p className="border-b"></p>
+                            </div>
                         </div>
                     </div>
                     <div className="transform transition ease-in-out duration-300  hover:-translate-y-4">
                         <div className="text-center space-y-3">
+
                             <img alt="" src={kmv.src} className={`rounded ${styles.img}`}/>
-                                <div>
-                                    <a href="page-profile.html">Karolina Muñoz</a>
-                                </div>
-                                <div className="text-sm uppercase text-gray-400">Sr. Web Developer </div>
-                                <div className="border-b"></div>
+
+                            <div>
+                                <p>Karolina Muñoz</p>
+                                <p className="mt-3 text-sm uppercase text-gray-400">Sr. Web Developer </p>
+                                <p className="border-b"></p>
+                            </div>
                         </div>
                     </div>
 
                     <div className="transform transition ease-in-out duration-300  hover:-translate-y-4">
-                        <div className="text-center space-y-3">
+                        <div className="text-center space-y-3 overflow-hidden">
                             <img alt="" src={heroImage.src} className={`rounded ${styles.img}`}/>
-                                <div>
-                                    <a href="page-profile.html">Andrey Sanchez</a>
-                                </div>
-                                <div className="text-sm uppercase text-gray-400">RPA Developer</div>
-                                <div className="border-b"></div>
+                            <div>
+                                <p>Andrey Sanchez</p>
+                                <p className="mt-3 text-sm uppercase text-gray-400">RPA Developer</p>
+                                <p className="border-b"></p>
+                            </div>
                         </div>
                     </div>
 
                     <div className="transform transition ease-in-out duration-300  hover:-translate-y-4">
-                        <div className="text-center space-y-3">
+                        <div className="text-center space-y-3 overflow-hidden">
                             <img alt="" src={heroImage.src} className={`rounded ${styles.img}`}/>
-                                <div>
-                                    <a href="page-profile.html">Angel Prado</a>
-                                </div>
-                                <div className="text-sm uppercase text-gray-400">Support</div>
-                                <div className="border-b"></div>
+                            <div>
+                                <p>Angel Prado</p>
+                                <p className="mt-3 text-sm uppercase text-gray-400">Support</p>
+                                <p className="border-b"></p>
+                            </div>
                         </div>
                     </div>
                     <div className="transform transition ease-in-out duration-300  hover:-translate-y-4">
                         <div className="text-center space-y-3">
                             <img alt="" src={ccj.src} className={`rounded ${styles.img}`}/>
                             <div>
-                                <a href="page-profile.html">Christian Carrizo</a>
+                                <p>Christian Carrizo</p>
+                                <p className="mt-3 text-sm uppercase text-gray-400">Cloud and virtualization</p>
+                                <p className="border-b"></p>
                             </div>
-                            <div className="text-sm uppercase text-gray-400">Cloud and virtualization</div>
-                            <div className="border-b"></div>
                         </div>
                     </div>
                     <div className="transform transition ease-in-out duration-300  hover:-translate-y-4">
-                        <div className="text-center space-y-3">
+                        <div className="text-center space-y-3 overflow-hidden">
                             <img alt="" src={heroImage.src} className={`rounded ${styles.img}`}/>
                             <div>
-                                <a href="page-profile.html">Juan Carlos Vargas</a>
+                                <p>Juan Carlos Vargas</p>
+                                <p className="mt-3 text-sm uppercase text-gray-400">Finance Analyst</p>
+                                <p className="border-b"></p>
                             </div>
-                            <div className="text-sm uppercase text-gray-400">Finance Analyst</div>
-                            <div className="border-b"></div>
                         </div>
                     </div>
                 </div>
